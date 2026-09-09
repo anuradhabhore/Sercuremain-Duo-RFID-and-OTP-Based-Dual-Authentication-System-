@@ -73,7 +73,7 @@ Denied           OTP
 
 The user places an RFID card near the RFID reader.
 
-The RFID reader reads the card's UID and communicates with **LPC2148 through SPI**.
+The RFID reader reads the card's UID and communicates with **LPC2148 through UART**.
 
 LPC2148 compares the received RFID UID with the authorized UID stored in memory.
 
