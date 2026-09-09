@@ -29,7 +29,7 @@ RFID Card
     ↓
 RFID Reader
     ↓
-SPI Communication
+UART Communication
     ↓
 LPC2148
     ↓
@@ -60,6 +60,12 @@ Denied           OTP
             Denied       Successful
                          ↓
                     LCD Display
+
+##  PROJECT BLOCK DIAGRAM
+
+
+<img width="1093" height="728" alt="image" src="https://github.com/user-attachments/assets/3e83cefc-c00c-4fcf-b29e-5af976ce2ac2" />
+
 
 ## 🔑 Authentication Process
 
@@ -173,7 +179,7 @@ AUTHENTICATION FAILED
 
 | Device                | Protocol/Interface          |
 | --------------------- | --------------------------- |
-| RFID Reader ↔ LPC2148 | **SPI**                     |
+| RFID Reader ↔ LPC2148 | **UART**                     |
 | GSM Module ↔ LPC2148  | **UART**                    |
 | Keypad ↔ LPC2148      | **GPIO**                    |
 | LCD ↔ LPC2148         | **GPIO/Parallel Interface** |
@@ -186,7 +192,6 @@ AUTHENTICATION FAILED
 * **Embedded C**
 * **LPC2148 ARM7**
 * **Keil µVision**
-* **SPI**
 * **UART**
 * **GPIO**
 * **RFID**
@@ -221,7 +226,7 @@ AUTHENTICATION FAILED
                   │ RFID Reader   │
                   └───────┬───────┘
                           │
-                         SPI
+                         UART
                           │
                           ↓
                   ┌────────────────┐
@@ -444,7 +449,6 @@ This project demonstrates practical knowledge of:
 * Embedded C programming
 * ARM7/LPC2148 programming
 * Microcontroller interfacing
-* SPI communication
 * UART communication
 * GSM AT commands
 * RFID interfacing
@@ -459,7 +463,7 @@ This project demonstrates practical knowledge of:
 
 ## 📌 Project Summary
 
-**SecurePass Duo** is an RFID and OTP-based dual authentication system using **LPC2148**. The RFID reader communicates with LPC2148 through **SPI**, while the GSM module communicates through **UART**. After successful RFID verification, an OTP is sent to the registered mobile number. The user enters the OTP through the keypad, and authentication is successful only when both RFID and OTP are valid.
+**SecurePass Duo** is an RFID and OTP-based dual authentication system using **LPC2148**. The RFID reader communicates with LPC2148 through , while the GSM module communicates through **UART**. After successful RFID verification, an OTP is sent to the registered mobile number. The user enters the OTP through the keypad, and authentication is successful only when both RFID and OTP are valid.
 
 ---
 
